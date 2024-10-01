@@ -1,0 +1,1 @@
+export const getNumber = (a:number, b:number) => a * b;
