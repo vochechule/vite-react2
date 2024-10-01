@@ -142,61 +142,61 @@
 
 
 
-// import React, { useState } from 'react';
-// import { Car, Bike, Vehicle } from './designPatterns/prototype/vehicle';
+import React, { useState } from 'react';
+import { Car, Bike, Vehicle } from './designPatterns/prototype/vehicle';
 
-// const App: React.FC = () => {
-//   // Initial vehicles
-//   const initialCar = new Car('Toyota', 'Corolla', 4);
-//   const initialBike = new Bike('Yamaha', 'FZ', true);
+const App: React.FC = () => {
+  // Initial vehicles
+  const initialCar = new Car('Toyota', 'Corolla', 4);
+  const initialBike = new Bike('Yamaha', 'FZ', true);
 
-//   // State to store cloned vehicles
-//   const [vehicles, setVehicles] = useState<Vehicle[]>([]);
+  // State to store cloned vehicles
+  const [vehicles, setVehicles] = useState<Vehicle[]>([]);
 
-//   // Function to clone a car and add it to the list
-//   const cloneCar = () => {
-//     const clonedCar = initialCar.clone();
-//     clonedCar.model = `${clonedCar.model} Clone`; // Adjusting cloned model name
-//     setVehicles([...vehicles, clonedCar]);
-//   };
+  // Function to clone a car and add it to the list
+  const cloneCar = () => {
+    const clonedCar = initialCar.clone();
+    clonedCar.model = `${clonedCar.model} Clone`; // Adjusting cloned model name
+    setVehicles([...vehicles, clonedCar]);
+  };
 
-//   // Function to clone a bike and add it to the list
-//   const cloneBike = () => {
-//     const clonedBike = initialBike.clone();
-//     clonedBike.model = `${clonedBike.model} Clone`; // Adjusting cloned model name
-//     setVehicles([...vehicles, clonedBike]);
-//   };
+  // Function to clone a bike and add it to the list
+  const cloneBike = () => {
+    const clonedBike = initialBike.clone();
+    clonedBike.model = `${clonedBike.model} Clone`; // Adjusting cloned model name
+    setVehicles([...vehicles, clonedBike]);
+  };
 
-//   return (
-//     <div>
-//       <h1>Prototype Pattern Example - Vehicles</h1>
+  return (
+    <div>
+      <h1>Prototype Pattern Example - Vehicles</h1>
 
-//       <div>
-//         <h2>Original Vehicles</h2>
-//         <p>{initialCar.getDetails()}</p>
-//         <p>{initialBike.getDetails()}</p>
+      <div>
+        <h2>Original Vehicles</h2>
+        <p>{initialCar.getDetails()}</p>
+        <p>{initialBike.getDetails()}</p>
 
-//         <button onClick={cloneCar}>Clone Car</button>
-//         <button onClick={cloneBike}>Clone Bike</button>
-//       </div>
+        <button onClick={cloneCar}>Clone Car</button>
+        <button onClick={cloneBike}>Clone Bike</button>
+      </div>
 
-//       <div>
-//         <h2>Cloned Vehicles</h2>
-//         {vehicles.length > 0 ? (
-//           <ul>
-//             {vehicles.map((vehicle, index) => (
-//               <li key={index}>{vehicle.getDetails()}</li>
-//             ))}
-//           </ul>
-//         ) : (
-//           <p>No vehicles cloned yet.</p>
-//         )}
-//       </div>
-//     </div>
-//   );
-// };
+      <div>
+        <h2>Cloned Vehicles</h2>
+        {vehicles.length > 0 ? (
+          <ul>
+            {vehicles.map((vehicle, index) => (
+              <li key={index}>{vehicle.getDetails()}</li>
+            ))}
+          </ul>
+        ) : (
+          <p>No vehicles cloned yet.</p>
+        )}
+      </div>
+    </div>
+  );
+};
 
-// export default App;
+export default App;
 
 
 
@@ -279,30 +279,30 @@
 
 
 
-import React from 'react';
-import { ChatRoom, ChatUser } from './designPatterns/observer/chat';
+// import React from 'react';
+// import { ChatRoom, ChatUser } from './designPatterns/observer/chat';
 
-const App: React.FC = () => {
-  // Vytvoření chatovací místnosti
-  const chatRoom = new ChatRoom();
+// const App: React.FC = () => {
+//   // Vytvoření chatovací místnosti
+//   const chatRoom = new ChatRoom();
 
-  // Vytvoření uživatelů
-  const user1 = new ChatUser("Alice");
-  const user2 = new ChatUser("Bob");
+//   // Vytvoření uživatelů
+//   const user1 = new ChatUser("Alice");
+//   const user2 = new ChatUser("Bob");
 
-  // Přidání uživatelů do chatovací místnosti
-  chatRoom.addUser(user1);
-  chatRoom.addUser(user2);
+//   // Přidání uživatelů do chatovací místnosti
+//   chatRoom.addUser(user1);
+//   chatRoom.addUser(user2);
 
-  // Odeslání zprávy do chatovací místnosti
-  chatRoom.sendMessage("Vítejte v chatovací místnosti!");
+//   // Odeslání zprávy do chatovací místnosti
+//   chatRoom.sendMessage("Vítejte v chatovací místnosti!");
 
-  return (
-    <div>
-      <h1>Observer Pattern Example - Chat Room</h1>
-      <p>Uživatelé obdrželi zprávu, zkontrolujte konzoli pro detaily.</p>
-    </div>
-  );
-};
+//   return (
+//     <div>
+//       <h1>Observer Pattern Example - Chat Room</h1>
+//       <p>Uživatelé obdrželi zprávu, zkontrolujte konzoli pro detaily.</p>
+//     </div>
+//   );
+// };
 
-export default App;
+// export default App;
